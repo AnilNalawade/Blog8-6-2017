@@ -28,7 +28,7 @@ String createdDate=date.toString();
 if(title != null && blog != null && createdDate !=null)
 {
 	Class.forName("com.mysql.jdbc.Driver");
-	String url="jdbc:mysql://localhost:3306/sampledb";
+	String url="jdbc:mysql://10.131.35.121:3306/sampledb";
 	Connection con=DriverManager.getConnection(url,"AnilNalawade","Nilnik123");
 
  
