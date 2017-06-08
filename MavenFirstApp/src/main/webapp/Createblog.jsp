@@ -28,13 +28,13 @@ String createdDate=date.toString();
 if(title != null && blog != null && createdDate !=null)
 {
 	Class.forName("com.mysql.jdbc.Driver");
-	String url="jdbc:mysql://localhost:3306/project";
-	Connection con=DriverManager.getConnection(url,"root","root");
+	String url="jdbc:mysql://localhost:3306/sampledb";
+	Connection con=DriverManager.getConnection(url,"AnilNalawade","Nilnik123");
 
  
     String uName=(String)session.getAttribute("uname");
 
-	PreparedStatement pstmt=con.prepareStatement("insert into blogs1 values(?,?,?,?,?)");
+	PreparedStatement pstmt=con.prepareStatement("insert into blogs values(?,?,?,?,?)");
 	pstmt.setString(1,id);
 	pstmt.setString(2,title);
 	pstmt.setString(3,"20-12-2016");
