@@ -23,7 +23,7 @@ String url="jdbc:mysql://localhost:3306/project";
 Connection con=DriverManager.getConnection(url,"root","root");
 
 Statement stmt=con.createStatement();
-String query="select b.blogid,r.first_name,r.last_name,b.BlogContent,b.BlogTitle,b.createdDate from registration r inner join blogs1 b on r.login_name=b.login_name"; 
+String query="select b.blogid,r.first_name,r.last_name,b.BlogContent,b.BlogTitle,b.createdDate from registration r inner join blogs b on r.login_name=b.login_name"; 
 ResultSet rs=stmt.executeQuery(query);
 
 while(rs.next())

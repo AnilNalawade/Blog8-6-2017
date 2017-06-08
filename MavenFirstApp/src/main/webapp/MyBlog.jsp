@@ -25,7 +25,7 @@ Connection con=DriverManager.getConnection(url,"root","root");
 String name=(String)session.getAttribute("uname");
 
 Statement stmt=con.createStatement();
-String query="select b.blogid,r.first_name,r.last_name,b.BlogContent,b.BlogTitle,b.createdDate from registration r inner join blogs1 b on r.login_name=b.login_name where r.login_name='"+name+"'"; 
+String query="select b.blogid,r.first_name,r.last_name,b.BlogContent,b.BlogTitle,b.createdDate from registration r inner join blogs b on r.login_name=b.login_name where r.login_name='"+name+"'"; 
 ResultSet rs=stmt.executeQuery(query);
 
 while(rs.next())
